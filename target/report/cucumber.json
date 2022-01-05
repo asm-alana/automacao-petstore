@@ -1,0 +1,167 @@
+[
+  {
+    "line": 7,
+    "elements": [
+      {
+        "line": 11,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Contexto",
+        "steps": [
+          {
+            "result": {
+              "duration": 4455600,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "que estou no sistema Petstore",
+            "match": {
+              "location": "steps.PetSteps.queEstouNoSistemaPetstore()"
+            },
+            "keyword": "Dado "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2022-01-05T14:30:49.832Z",
+        "before": [
+          {
+            "result": {
+              "duration": 3007400,
+              "status": "passed"
+            },
+            "match": {
+              "location": "steps.Hooks.before(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "line": 32,
+        "name": "Deletar um pet existente na API Petstore",
+        "description": "",
+        "id": "gerenciamento-de-um-animal-na-petstore;deletar-um-pet-existente-na-api-petstore",
+        "after": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "match": {
+              "location": "steps.Hooks.after()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Cenario",
+        "steps": [
+          {
+            "output": [
+              "DADOS ENVIADOS NO REQUEST",
+              "POSThttps://petstore.swagger.io/v2/pet",
+              "Body: \n{\"photoUrls\":[],\"name\":\"string\",\"id\":7634,\"status\":\"available\"}",
+              "Headers: \n{Accept\u003dapplication/json, Content-Type\u003dapplication/json}",
+              "DADOS RECEBIDOS",
+              "Status code: 200",
+              "Payload recebido: \n{\n    \"id\": 7634,\n    \"name\": \"string\",\n    \"photoUrls\": [\n        \n    ],\n    \"tags\": [\n        \n    ],\n    \"status\": \"available\"\n}",
+              "Tempo de resposta1879"
+            ],
+            "result": {
+              "duration": 3586300400,
+              "status": "passed"
+            },
+            "line": 33,
+            "name": "existe um pet cadastrado na api",
+            "match": {
+              "location": "steps.PetSteps.existeUmPetCadastradoNaApi()"
+            },
+            "keyword": "E "
+          },
+          {
+            "output": [
+              "DADOS ENVIADOS NO REQUEST",
+              "DELETEhttps://petstore.swagger.io/v2/pet/7634",
+              "Headers: \n{Accept\u003dapplication/json, Content-Type\u003dapplication/json}",
+              "DADOS RECEBIDOS",
+              "Status code: 200",
+              "Payload recebido: \n{\n    \"code\": 200,\n    \"type\": \"unknown\",\n    \"message\": \"7634\"\n}",
+              "Tempo de resposta980"
+            ],
+            "result": {
+              "duration": 1717348200,
+              "status": "passed"
+            },
+            "line": 34,
+            "name": "deleto esse pet",
+            "match": {
+              "location": "steps.PetSteps.deletoEssePet()"
+            },
+            "keyword": "Quando "
+          },
+          {
+            "result": {
+              "duration": 24553300,
+              "status": "passed"
+            },
+            "line": 35,
+            "name": "o pet deve ser deletado corretamente",
+            "match": {
+              "location": "steps.PetSteps.oPetDeveSerDeletadoCorretamente()"
+            },
+            "keyword": "Entao "
+          },
+          {
+            "result": {
+              "duration": 4431200,
+              "status": "passed"
+            },
+            "line": 36,
+            "name": "o status code do request deve ser 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 34
+                }
+              ],
+              "location": "steps.PetSteps.oStatusCodeDoRequestDeveSer(int)"
+            },
+            "keyword": "E "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@regressivo"
+          },
+          {
+            "name": "@pets"
+          },
+          {
+            "name": "@delete"
+          }
+        ]
+      }
+    ],
+    "name": "Gerenciamento de um animal na Petstore",
+    "description": "  Eu como administrador da loja Petstore\n  Quero cadastrar, atualizar e deletar animais do sistema",
+    "id": "gerenciamento-de-um-animal-na-petstore",
+    "keyword": "Funcionalidade",
+    "uri": "file:src/test/resources/features/Pet.feature",
+    "tags": [
+      {
+        "name": "@regressivo",
+        "type": "Tag",
+        "location": {
+          "line": 6,
+          "column": 1
+        }
+      },
+      {
+        "name": "@pets",
+        "type": "Tag",
+        "location": {
+          "line": 6,
+          "column": 13
+        }
+      }
+    ]
+  }
+]
