@@ -11,7 +11,7 @@
         "steps": [
           {
             "result": {
-              "duration": 4455600,
+              "duration": 4001100,
               "status": "passed"
             },
             "line": 12,
@@ -24,11 +24,397 @@
         ]
       },
       {
-        "start_timestamp": "2022-01-05T14:30:49.832Z",
+        "start_timestamp": "2022-01-05T14:47:58.396Z",
         "before": [
           {
             "result": {
-              "duration": 3007400,
+              "duration": 3689000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "steps.Hooks.before(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "line": 15,
+        "name": "Cadastra novo pet na API Petstore",
+        "description": "",
+        "id": "gerenciamento-de-um-animal-na-petstore;cadastra-novo-pet-na-api-petstore",
+        "after": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "match": {
+              "location": "steps.Hooks.after()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Cenario",
+        "steps": [
+          {
+            "output": [
+              "DADOS ENVIADOS NO REQUEST",
+              "POSThttps://petstore.swagger.io/v2/pet",
+              "Body: \n{\"photoUrls\":[],\"name\":\"string\",\"id\":7634,\"status\":\"available\"}",
+              "Headers: \n{Accept\u003dapplication/json, Content-Type\u003dapplication/json}",
+              "DADOS RECEBIDOS",
+              "Status code: 200",
+              "Payload recebido: \n{\n    \"id\": 7634,\n    \"name\": \"string\",\n    \"photoUrls\": [\n        \n    ],\n    \"tags\": [\n        \n    ],\n    \"status\": \"available\"\n}",
+              "Tempo de resposta1820"
+            ],
+            "result": {
+              "duration": 3540606100,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "envio um request de cadastro de pet com dados validos",
+            "match": {
+              "location": "steps.PetSteps.envioUmRequestDeCadastroDePetComDadosValidos()"
+            },
+            "keyword": "Quando "
+          },
+          {
+            "result": {
+              "duration": 682599800,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "o pet deve ser criado corretamente",
+            "match": {
+              "location": "steps.PetSteps.oPetDeveSerCriadoCorretamente()"
+            },
+            "keyword": "Entao "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "o status code do request deve ser 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 34
+                }
+              ],
+              "location": "steps.PetSteps.oStatusCodeDoRequestDeveSer(int)"
+            },
+            "keyword": "E "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@regressivo"
+          },
+          {
+            "name": "@pets"
+          },
+          {
+            "name": "@post"
+          }
+        ]
+      },
+      {
+        "line": 11,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Contexto",
+        "steps": [
+          {
+            "result": {
+              "duration": 2060000,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "que estou no sistema Petstore",
+            "match": {
+              "location": "steps.PetSteps.queEstouNoSistemaPetstore()"
+            },
+            "keyword": "Dado "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2022-01-05T14:48:02.723Z",
+        "before": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "match": {
+              "location": "steps.Hooks.before(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "line": 20,
+        "name": "Busca uma pet existente na API Petstore",
+        "description": "",
+        "id": "gerenciamento-de-um-animal-na-petstore;busca-uma-pet-existente-na-api-petstore",
+        "after": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "match": {
+              "location": "steps.Hooks.after()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Cenario",
+        "steps": [
+          {
+            "output": [
+              "DADOS ENVIADOS NO REQUEST",
+              "POSThttps://petstore.swagger.io/v2/pet",
+              "Body: \n{\"photoUrls\":[],\"name\":\"string\",\"id\":7634,\"status\":\"available\"}",
+              "Headers: \n{Accept\u003dapplication/json, Content-Type\u003dapplication/json}",
+              "DADOS RECEBIDOS",
+              "Status code: 200",
+              "Payload recebido: \n{\n    \"id\": 7634,\n    \"name\": \"string\",\n    \"photoUrls\": [\n        \n    ],\n    \"tags\": [\n        \n    ],\n    \"status\": \"available\"\n}",
+              "Tempo de resposta883"
+            ],
+            "result": {
+              "duration": 899232100,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "existe um pet cadastrado na api",
+            "match": {
+              "location": "steps.PetSteps.existeUmPetCadastradoNaApi()"
+            },
+            "keyword": "E "
+          },
+          {
+            "output": [
+              "DADOS ENVIADOS NO REQUEST",
+              "GEThttps://petstore.swagger.io/v2/pet/7634",
+              "Headers: \n{Accept\u003dapplication/json, Content-Type\u003dapplication/json}",
+              "DADOS RECEBIDOS",
+              "Status code: 200",
+              "Payload recebido: \n{\n    \"id\": 7634,\n    \"name\": \"string\",\n    \"photoUrls\": [\n        \n    ],\n    \"tags\": [\n        \n    ],\n    \"status\": \"available\"\n}",
+              "Tempo de resposta851"
+            ],
+            "result": {
+              "duration": 1465097300,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "buscar esse pet",
+            "match": {
+              "location": "steps.PetSteps.buscarEssePet()"
+            },
+            "keyword": "Quando "
+          },
+          {
+            "result": {
+              "duration": 3972900,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "os dados do pet devem ser retornados",
+            "match": {
+              "location": "steps.PetSteps.osDadosDoPetDevemSerRetornados()"
+            },
+            "keyword": "Entao "
+          },
+          {
+            "result": {
+              "duration": 1002200,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "o status code do request deve ser 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 34
+                }
+              ],
+              "location": "steps.PetSteps.oStatusCodeDoRequestDeveSer(int)"
+            },
+            "keyword": "E "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@regressivo"
+          },
+          {
+            "name": "@pets"
+          },
+          {
+            "name": "@get"
+          }
+        ]
+      },
+      {
+        "line": 11,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Contexto",
+        "steps": [
+          {
+            "result": {
+              "duration": 1016600,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "que estou no sistema Petstore",
+            "match": {
+              "location": "steps.PetSteps.queEstouNoSistemaPetstore()"
+            },
+            "keyword": "Dado "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2022-01-05T14:48:05.105Z",
+        "before": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "match": {
+              "location": "steps.Hooks.before(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "line": 26,
+        "name": "Alterar um pet existente na API Petstore",
+        "description": "",
+        "id": "gerenciamento-de-um-animal-na-petstore;alterar-um-pet-existente-na-api-petstore",
+        "after": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "match": {
+              "location": "steps.Hooks.after()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Cenario",
+        "steps": [
+          {
+            "output": [
+              "DADOS ENVIADOS NO REQUEST",
+              "POSThttps://petstore.swagger.io/v2/pet",
+              "Body: \n{\"photoUrls\":[],\"name\":\"string\",\"id\":7634,\"status\":\"available\"}",
+              "Headers: \n{Accept\u003dapplication/json, Content-Type\u003dapplication/json}",
+              "DADOS RECEBIDOS",
+              "Status code: 200",
+              "Payload recebido: \n{\n    \"id\": 7634,\n    \"name\": \"string\",\n    \"photoUrls\": [\n        \n    ],\n    \"tags\": [\n        \n    ],\n    \"status\": \"available\"\n}",
+              "Tempo de resposta940"
+            ],
+            "result": {
+              "duration": 960655800,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "existe um pet cadastrado na api",
+            "match": {
+              "location": "steps.PetSteps.existeUmPetCadastradoNaApi()"
+            },
+            "keyword": "E "
+          },
+          {
+            "output": [
+              "DADOS ENVIADOS NO REQUEST",
+              "PUThttps://petstore.swagger.io/v2/pet",
+              "Body: \n{\"photoUrls\":[],\"name\":\"string\",\"id\":7634,\"status\":\"pending\"}",
+              "Headers: \n{Accept\u003dapplication/json, Content-Type\u003dapplication/json}",
+              "DADOS RECEBIDOS",
+              "Status code: 200",
+              "Payload recebido: \n{\n    \"id\": 7634,\n    \"name\": \"string\",\n    \"photoUrls\": [\n        \n    ],\n    \"tags\": [\n        \n    ],\n    \"status\": \"pending\"\n}",
+              "Tempo de resposta780"
+            ],
+            "result": {
+              "duration": 790778100,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "altero os dados do pet",
+            "match": {
+              "location": "steps.PetSteps.alteroOsDadosDoPet()"
+            },
+            "keyword": "Quando "
+          },
+          {
+            "result": {
+              "duration": 5997900,
+              "status": "passed"
+            },
+            "line": 29,
+            "name": "o pet deve ser alterado com sucesso",
+            "match": {
+              "location": "steps.PetSteps.oPetDeveSerAlteradoComSucesso()"
+            },
+            "keyword": "Entao "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 30,
+            "name": "o status code do request deve ser 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 34
+                }
+              ],
+              "location": "steps.PetSteps.oStatusCodeDoRequestDeveSer(int)"
+            },
+            "keyword": "E "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@regressivo"
+          },
+          {
+            "name": "@pets"
+          },
+          {
+            "name": "@put"
+          }
+        ]
+      },
+      {
+        "line": 11,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Contexto",
+        "steps": [
+          {
+            "result": {
+              "duration": 981500,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "que estou no sistema Petstore",
+            "match": {
+              "location": "steps.PetSteps.queEstouNoSistemaPetstore()"
+            },
+            "keyword": "Dado "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2022-01-05T14:48:06.877Z",
+        "before": [
+          {
+            "result": {
               "status": "passed"
             },
             "match": {
@@ -62,10 +448,10 @@
               "DADOS RECEBIDOS",
               "Status code: 200",
               "Payload recebido: \n{\n    \"id\": 7634,\n    \"name\": \"string\",\n    \"photoUrls\": [\n        \n    ],\n    \"tags\": [\n        \n    ],\n    \"status\": \"available\"\n}",
-              "Tempo de resposta1879"
+              "Tempo de resposta988"
             ],
             "result": {
-              "duration": 3586300400,
+              "duration": 997637200,
               "status": "passed"
             },
             "line": 33,
@@ -83,10 +469,10 @@
               "DADOS RECEBIDOS",
               "Status code: 200",
               "Payload recebido: \n{\n    \"code\": 200,\n    \"type\": \"unknown\",\n    \"message\": \"7634\"\n}",
-              "Tempo de resposta980"
+              "Tempo de resposta1435"
             ],
             "result": {
-              "duration": 1717348200,
+              "duration": 1455150000,
               "status": "passed"
             },
             "line": 34,
@@ -98,7 +484,7 @@
           },
           {
             "result": {
-              "duration": 24553300,
+              "duration": 29405600,
               "status": "passed"
             },
             "line": 35,
@@ -110,7 +496,7 @@
           },
           {
             "result": {
-              "duration": 4431200,
+              "duration": 1000900,
               "status": "passed"
             },
             "line": 36,
