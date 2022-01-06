@@ -78,17 +78,41 @@ font-src * data: blob: 'unsafe-inline';"/>
   "data": {
     "labels": [
       "@store",
+      "@postStore",
+      "@postPet",
+      "@getPetSemSucesso",
       "@deleteStore",
-      "@regressivo"
+      "@pets",
+      "@deletePet",
+      "@getPetSucesso",
+      "@putPet",
+      "@regressivo",
+      "@getStore"
     ],
     "datasets": [
       {
         "data": [
+          3,
           1,
           1,
+          1,
+          1,
+          5,
+          1,
+          1,
+          1,
+          8,
           1
         ],
         "backgroundColor": [
+          "rgba(40, 167, 69, 1.000)",
+          "rgba(40, 167, 69, 1.000)",
+          "rgba(40, 167, 69, 1.000)",
+          "rgba(40, 167, 69, 1.000)",
+          "rgba(40, 167, 69, 1.000)",
+          "rgba(40, 167, 69, 1.000)",
+          "rgba(40, 167, 69, 1.000)",
+          "rgba(40, 167, 69, 1.000)",
           "rgba(40, 167, 69, 1.000)",
           "rgba(40, 167, 69, 1.000)",
           "rgba(40, 167, 69, 1.000)"
@@ -99,9 +123,25 @@ font-src * data: blob: 'unsafe-inline';"/>
         "data": [
           0,
           0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
           0
         ],
         "backgroundColor": [
+          "rgba(220, 53, 69, 1.000)",
+          "rgba(220, 53, 69, 1.000)",
+          "rgba(220, 53, 69, 1.000)",
+          "rgba(220, 53, 69, 1.000)",
+          "rgba(220, 53, 69, 1.000)",
+          "rgba(220, 53, 69, 1.000)",
+          "rgba(220, 53, 69, 1.000)",
+          "rgba(220, 53, 69, 1.000)",
           "rgba(220, 53, 69, 1.000)",
           "rgba(220, 53, 69, 1.000)",
           "rgba(220, 53, 69, 1.000)"
@@ -112,9 +152,25 @@ font-src * data: blob: 'unsafe-inline';"/>
         "data": [
           0,
           0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
           0
         ],
         "backgroundColor": [
+          "rgba(255, 193, 7, 1.000)",
+          "rgba(255, 193, 7, 1.000)",
+          "rgba(255, 193, 7, 1.000)",
+          "rgba(255, 193, 7, 1.000)",
+          "rgba(255, 193, 7, 1.000)",
+          "rgba(255, 193, 7, 1.000)",
+          "rgba(255, 193, 7, 1.000)",
+          "rgba(255, 193, 7, 1.000)",
           "rgba(255, 193, 7, 1.000)",
           "rgba(255, 193, 7, 1.000)",
           "rgba(255, 193, 7, 1.000)"
@@ -135,7 +191,7 @@ font-src * data: blob: 'unsafe-inline';"/>
           "stacked": true,
           "scaleLabel": {
             "display": true,
-            "labelString": "3 Tags"
+            "labelString": "11 Tags"
           },
           "stepSize": 0.0
         }
@@ -144,7 +200,7 @@ font-src * data: blob: 'unsafe-inline';"/>
         {
           "ticks": {
             "min": 0,
-            "stepSize": 1,
+            "stepSize": 8,
             "display": true
           },
           "stacked": true,
@@ -247,7 +303,7 @@ font-src * data: blob: 'unsafe-inline';"/>
                                 <a class="nav-link " href="pages/feature-summary.html">All Features</a>
                     </li>
             </ul>
-            <span class="text-light">2022-01-06 14:40:16</span>
+            <span class="text-light">2022-01-06 14:45:14</span>
         </div>
     </nav>
     <main role="main" class="container">
@@ -272,14 +328,14 @@ font-src * data: blob: 'unsafe-inline';"/>
                 <div class="card-header">Tag Summary</div>
             <div class="card-body">
             <ul class="list-group list-group-flush" data-cluecumber-item="tag-summary">
-                <li class="list-group-item">3         Tags
+                <li class="list-group-item">11         Tags
  in
                     <br>
-                    1 Tagged         Scenario
+                    8 Tagged         Scenarios
 
                 </li>
                 <li class="list-group-item">
-                    1 passed     <i class="color-passed cluecumber-icon icon-passed" data-toggle="tooltip"
+                    8 passed     <i class="color-passed cluecumber-icon icon-passed" data-toggle="tooltip"
        title="passed"><span style="display:none">passed</span></i>
 
                     <br>
@@ -322,6 +378,30 @@ font-src * data: blob: 'unsafe-inline';"/>
                     <tr>
                         <td class="text-left"><a
                                     href="pages/tag-scenarios/tag_store.html">@store</a></td>
+                        <td class="text-right"><strong>3</strong></td>
+                        <td class="text-right passedCell">3</td>
+                        <td class="text-right failedCell">0</td>
+                        <td class="text-right skippedCell">0</td>
+                    </tr>
+                    <tr>
+                        <td class="text-left"><a
+                                    href="pages/tag-scenarios/tag_postStore.html">@postStore</a></td>
+                        <td class="text-right"><strong>1</strong></td>
+                        <td class="text-right passedCell">1</td>
+                        <td class="text-right failedCell">0</td>
+                        <td class="text-right skippedCell">0</td>
+                    </tr>
+                    <tr>
+                        <td class="text-left"><a
+                                    href="pages/tag-scenarios/tag_postPet.html">@postPet</a></td>
+                        <td class="text-right"><strong>1</strong></td>
+                        <td class="text-right passedCell">1</td>
+                        <td class="text-right failedCell">0</td>
+                        <td class="text-right skippedCell">0</td>
+                    </tr>
+                    <tr>
+                        <td class="text-left"><a
+                                    href="pages/tag-scenarios/tag_getPetSemSucesso.html">@getPetSemSucesso</a></td>
                         <td class="text-right"><strong>1</strong></td>
                         <td class="text-right passedCell">1</td>
                         <td class="text-right failedCell">0</td>
@@ -337,7 +417,47 @@ font-src * data: blob: 'unsafe-inline';"/>
                     </tr>
                     <tr>
                         <td class="text-left"><a
+                                    href="pages/tag-scenarios/tag_pets.html">@pets</a></td>
+                        <td class="text-right"><strong>5</strong></td>
+                        <td class="text-right passedCell">5</td>
+                        <td class="text-right failedCell">0</td>
+                        <td class="text-right skippedCell">0</td>
+                    </tr>
+                    <tr>
+                        <td class="text-left"><a
+                                    href="pages/tag-scenarios/tag_deletePet.html">@deletePet</a></td>
+                        <td class="text-right"><strong>1</strong></td>
+                        <td class="text-right passedCell">1</td>
+                        <td class="text-right failedCell">0</td>
+                        <td class="text-right skippedCell">0</td>
+                    </tr>
+                    <tr>
+                        <td class="text-left"><a
+                                    href="pages/tag-scenarios/tag_getPetSucesso.html">@getPetSucesso</a></td>
+                        <td class="text-right"><strong>1</strong></td>
+                        <td class="text-right passedCell">1</td>
+                        <td class="text-right failedCell">0</td>
+                        <td class="text-right skippedCell">0</td>
+                    </tr>
+                    <tr>
+                        <td class="text-left"><a
+                                    href="pages/tag-scenarios/tag_putPet.html">@putPet</a></td>
+                        <td class="text-right"><strong>1</strong></td>
+                        <td class="text-right passedCell">1</td>
+                        <td class="text-right failedCell">0</td>
+                        <td class="text-right skippedCell">0</td>
+                    </tr>
+                    <tr>
+                        <td class="text-left"><a
                                     href="pages/tag-scenarios/tag_regressivo.html">@regressivo</a></td>
+                        <td class="text-right"><strong>8</strong></td>
+                        <td class="text-right passedCell">8</td>
+                        <td class="text-right failedCell">0</td>
+                        <td class="text-right skippedCell">0</td>
+                    </tr>
+                    <tr>
+                        <td class="text-left"><a
+                                    href="pages/tag-scenarios/tag_getStore.html">@getStore</a></td>
                         <td class="text-right"><strong>1</strong></td>
                         <td class="text-right passedCell">1</td>
                         <td class="text-right failedCell">0</td>
@@ -354,7 +474,7 @@ font-src * data: blob: 'unsafe-inline';"/>
 
 <footer class="footer navbar-dark">
     <div class="container-fluid">
-        <span>Cluecumber Report Plugin version 2.7.0 - Report generated on 2022-01-06 14:40:16.</span>
+        <span>Cluecumber Report Plugin version 2.7.0 - Report generated on 2022-01-06 14:45:14.</span>
     </div>
 </footer>    </body>
     </html>

@@ -55,8 +55,8 @@ public class PetSteps extends ApiRequest {
         envioUmRequestDeCadastroDePetComDadosValidos();
     }
 
-    @Quando("buscar esse pet")
-    public void buscarEssePet() {
+    @Quando("busco esse pet")
+    public void buscoEssePet() {
         super.uri = prop.getProp("uri_petstore") + PET_ENDPOINT + "/" + response.jsonPath().getJsonObject("id");
         super.body = new JSONObject();
         super.GET();
@@ -97,8 +97,8 @@ public class PetSteps extends ApiRequest {
                 body("type", is("unknown"));
     }
 
-    @Quando("buscar um pet com id igual a {int}")
-    public void buscarUmPetComIdIgualA(int id) {
+    @Quando("busco um pet com id igual a {int}")
+    public void buscoUmPetComIdIgualA(int id) {
         super.uri = prop.getProp("uri_petstore") + "/" + id;
         super.body = new JSONObject();
         super.GET();
