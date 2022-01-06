@@ -78,9 +78,9 @@ font-src * data: blob: 'unsafe-inline';"/>
   "data": {
     "labels": [
       "steps.Hooks.before(io.cucumber.java.Scenario)",
-      "envio um request de cadastro de pet com dados validos",
-      "o pet deve ser criado corretamente",
-      "o status code do request deve ser 200",
+      "existe um pedido cadastrado na api",
+      "deleto esse pedido",
+      "o pedido deve ser deletado corretamente",
       "steps.Hooks.after()"
     ],
     "datasets": [
@@ -89,7 +89,7 @@ font-src * data: blob: 'unsafe-inline';"/>
           0,
           0,
           3,
-          0,
+          1,
           0,
           0
         ],
@@ -270,17 +270,17 @@ font-src * data: blob: 'unsafe-inline';"/>
                                 <a class="nav-link " href="pages/feature-summary.html">All Features</a>
                     </li>
             </ul>
-            <span class="text-light">2022-01-05 11:48:12</span>
+            <span class="text-light">2022-01-06 14:40:16</span>
         </div>
     </nav>
     <main role="main" class="container">
         <div class="cluecumber-template">
             <div class="pb-2 mt-4 mb-2 border-bottom">
                     <h5>
-                            <a href="pages/feature-scenarios/feature_0.html">Gerenciamento de um animal na Petstore</a>
-                        <span class="small">file:src/test/resources/features/Pet.feature</span>
+                            <a href="pages/feature-scenarios/feature_0.html">Gerenciamento de um pedido na Petstore</a>
+                        <span class="small">file:src/test/resources/features/Store.feature</span>
                     </h5>
-                    <h3>Cadastra novo pet na API Petstore</h3>
+                    <h3>Deletar pedido no sistema Petstore</h3>
             </div>
 
     <div class="row" id="scenario-detail">
@@ -298,15 +298,15 @@ font-src * data: blob: 'unsafe-inline';"/>
         <div class="card h-100">
                 <div class="card-header">Scenario Info</div>
             <div class="card-body">
-                <li class="list-group-item">Started on:<br>2022-01-05 11:47:58</li>
-                <li class="list-group-item">Ended on:<br>2022-01-05 11:48:02</li>
-            <li class="list-group-item">Test Runtime:<br>0m 04s 230ms</li>
+                <li class="list-group-item">Started on:<br>2022-01-06 14:40:07</li>
+                <li class="list-group-item">Ended on:<br>2022-01-06 14:40:13</li>
+            <li class="list-group-item">Test Runtime:<br>0m 05s 595ms</li>
             <li class="list-group-item">
                     <a href="pages/tag-scenarios/tag_regressivo.html">@regressivo</a>,
 
-                    <a href="pages/tag-scenarios/tag_pets.html">@pets</a>,
+                    <a href="pages/tag-scenarios/tag_store.html">@store</a>,
 
-                    <a href="pages/tag-scenarios/tag_post.html">@post</a>            </li>
+                    <a href="pages/tag-scenarios/tag_deleteStore.html">@deleteStore</a>            </li>
             </div>
         </div>
     </div>
@@ -350,13 +350,13 @@ font-src * data: blob: 'unsafe-inline';"/>
                         <div class="row row_passed table-row-passed">
                             <div class="col-9 text-left">
                                 <span class="text-left">1.</span>
-                                <span data-toggle="tooltip" title="steps.PetSteps.queEstouNoSistemaPetstore()">
-                                    <a href="pages/step-scenarios/step_1969388793.html"><span
-                                                class="keyword">Dado </span> que estou no sistema Petstore</a>
+                                <span data-toggle="tooltip" title="steps.StoreSteps.queGerencioPedidosNaAPIPetstore()">
+                                    <a href="pages/step-scenarios/step_01722860505.html"><span
+                                                class="keyword">Dado </span> que gerencio pedidos na API Petstore</a>
                                 </span>
                             </div>
                             <div class="col-2 text-left small">
-                                0m 00s 004ms
+                                0m 00s 057ms
                             </div>
                             <div class="col-1 text-right">
     <i class="color-passed cluecumber-icon icon-passed" data-toggle="tooltip"
@@ -379,13 +379,13 @@ font-src * data: blob: 'unsafe-inline';"/>
                         <div class="row row_passed table-row-passed">
                             <div class="col-9 text-left">
                                 <span class="text-left">1.</span>
-                                <span data-toggle="tooltip" title="steps.PetSteps.envioUmRequestDeCadastroDePetComDadosValidos()">
-                                    <a href="pages/step-scenarios/step_1581118101.html"><span
-                                                class="keyword">Quando </span> envio um request de cadastro de pet com dados validos</a>
+                                <span data-toggle="tooltip" title="steps.StoreSteps.existeUmPedidoCadastradoNaApi()">
+                                    <a href="pages/step-scenarios/step_0982815003.html"><span
+                                                class="keyword">E </span> existe um pedido cadastrado na api</a>
                                 </span>
                             </div>
                             <div class="col-2 text-left small">
-                                0m 03s 540ms
+                                0m 03s 609ms
                             </div>
                             <div class="col-1 text-right">
     <i class="color-passed cluecumber-icon icon-passed" data-toggle="tooltip"
@@ -393,20 +393,16 @@ font-src * data: blob: 'unsafe-inline';"/>
                             </div>
 
         <div class="row w-100 p-3 m-0 scenarioOutput">
-            <div class="w-100 text-left small p-2">DADOS ENVIADOS NO REQUEST<br><br>POSThttps://petstore.swagger.io/v2/pet<br><br>Body: 
-{"photoUrls":[],"name":"string","id":7634,"status":"available"}<br><br>Headers: 
+            <div class="w-100 text-left small p-2">DADOS ENVIADOS NO REQUEST<br><br>POSThttps://petstore.swagger.io/v2/store/order<br><br>Body: 
+{"petId":2,"quantity":1,"id":1,"complete":true,"status":"placed"}<br><br>Headers: 
 {Accept=application/json, Content-Type=application/json}<br><br>DADOS RECEBIDOS<br><br>Status code: 200<br><br>Payload recebido: 
 {
-    "id": 7634,
-    "name": "string",
-    "photoUrls": [
-        
-    ],
-    "tags": [
-        
-    ],
-    "status": "available"
-}<br><br>Tempo de resposta1820</div>
+    "id": 1,
+    "petId": 2,
+    "quantity": 1,
+    "status": "placed",
+    "complete": true
+}<br><br>Tempo de resposta1709</div>
         </div>
                         </div>
 
@@ -414,32 +410,41 @@ font-src * data: blob: 'unsafe-inline';"/>
                         <div class="row row_passed table-row-passed">
                             <div class="col-9 text-left">
                                 <span class="text-left">2.</span>
-                                <span data-toggle="tooltip" title="steps.PetSteps.oPetDeveSerCriadoCorretamente()">
-                                    <a href="pages/step-scenarios/step_0915119180.html"><span
-                                                class="keyword">Entao </span> o pet deve ser criado corretamente</a>
+                                <span data-toggle="tooltip" title="steps.StoreSteps.deletoEssePedido()">
+                                    <a href="pages/step-scenarios/step_452823195.html"><span
+                                                class="keyword">Quando </span> deleto esse pedido</a>
                                 </span>
                             </div>
                             <div class="col-2 text-left small">
-                                0m 00s 682ms
+                                0m 01s 885ms
                             </div>
                             <div class="col-1 text-right">
     <i class="color-passed cluecumber-icon icon-passed" data-toggle="tooltip"
        title="passed"><span style="display:none">passed</span></i>
                             </div>
 
+        <div class="row w-100 p-3 m-0 scenarioOutput">
+            <div class="w-100 text-left small p-2">DADOS ENVIADOS NO REQUEST<br><br>DELETEhttps://petstore.swagger.io/v2/store/order/1<br><br>Headers: 
+{Accept=application/json, Content-Type=application/json}<br><br>DADOS RECEBIDOS<br><br>Status code: 200<br><br>Payload recebido: 
+{
+    "code": 200,
+    "type": "unknown",
+    "message": "1"
+}<br><br>Tempo de resposta866</div>
+        </div>
                         </div>
 
 
                         <div class="row row_passed table-row-passed">
                             <div class="col-9 text-left">
                                 <span class="text-left">3.</span>
-                                <span data-toggle="tooltip" title="steps.PetSteps.oStatusCodeDoRequestDeveSer(int)">
-                                    <a href="pages/step-scenarios/step_660137542.html"><span
-                                                class="keyword">E </span> o status code do request deve ser <span class="parameter">200</span></a>
+                                <span data-toggle="tooltip" title="steps.StoreSteps.oPedidoDeveSerDeletadoCorretamente()">
+                                    <a href="pages/step-scenarios/step_599158416.html"><span
+                                                class="keyword">Entao </span> o pedido deve ser deletado corretamente</a>
                                 </span>
                             </div>
                             <div class="col-2 text-left small">
-                                0m 00s 000ms
+                                0m 00s 040ms
                             </div>
                             <div class="col-1 text-right">
     <i class="color-passed cluecumber-icon icon-passed" data-toggle="tooltip"
@@ -458,7 +463,7 @@ font-src * data: blob: 'unsafe-inline';"/>
 
 <footer class="footer navbar-dark">
     <div class="container-fluid">
-        <span>Cluecumber Report Plugin version 2.7.0 - Report generated on 2022-01-05 11:48:12.</span>
+        <span>Cluecumber Report Plugin version 2.7.0 - Report generated on 2022-01-06 14:40:16.</span>
     </div>
 </footer>    </body>
     </html>

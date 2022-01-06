@@ -9,7 +9,7 @@ import io.cucumber.java.pt.Entao;
 import io.cucumber.java.pt.Quando;
 import io.restassured.RestAssured;
 import org.json.JSONObject;
-import pet.Pet;
+import pojo.Pet;
 import utils.PropertiesUtils;
 
 import java.io.IOException;
@@ -23,9 +23,12 @@ public class PetSteps extends ApiRequest {
     ApiHeaders apiHeaders = new ApiHeaders();
     Pet pet;
 
+    private static final String PET_ENDPOINT = "/v2/pet";
+    private static final String PLACEHOLDER_PATCH_ENDPOINT = "/posts/1";
+
     @Dado("que estou no sistema Petstore")
     public void queEstouNoSistemaPetstore() {
-        super.uri = prop.getProp("uri_petstore");
+        super.uri = prop.getProp("uri_petstore") + PET_ENDPOINT;
         super.headers = apiHeaders.petstoreHeaders();
     }
 
@@ -54,7 +57,7 @@ public class PetSteps extends ApiRequest {
 
     @Quando("buscar esse pet")
     public void buscarEssePet() {
-        super.uri = prop.getProp("uri_petstore") + "/" + response.jsonPath().getJsonObject("id");
+        super.uri = prop.getProp("uri_petstore") + PET_ENDPOINT + "/" + response.jsonPath().getJsonObject("id");
         super.body = new JSONObject();
         super.GET();
     }
@@ -66,7 +69,8 @@ public class PetSteps extends ApiRequest {
 
     @Quando("altero os dados do pet")
     public void alteroOsDadosDoPet() {
-        super.uri = prop.getProp("uri_petstore");
+        super.uri = prop.getProp("uri_petstore") + PET_ENDPOINT;
+        pet.setName("teste");
         pet.setStatus("pending");
         super.body = new JSONObject(new Gson().toJson(pet));
         super.PUT();
@@ -79,7 +83,7 @@ public class PetSteps extends ApiRequest {
 
     @Quando("deleto esse pet")
     public void deletoEssePet() {
-        super.uri = prop.getProp("uri_petstore") + "/" + response.jsonPath().getJsonObject("id");
+        super.uri = prop.getProp("uri_petstore") + PET_ENDPOINT + "/" + response.jsonPath().getJsonObject("id");
         super.body = new JSONObject();
         super.DELETE();
     }
@@ -92,4 +96,20 @@ public class PetSteps extends ApiRequest {
                 statusCode(200).
                 body("type", is("unknown"));
     }
+
+    @Quando("buscar um pet com id igual a {int}")
+    public void buscarUmPetComIdIgualA(int id) {
+        super.uri = prop.getProp("uri_petstore") + "/" + id;
+        super.body = new JSONObject();
+        super.GET();
+    }
+
+    @Entao("deve ser retornada a mensagem {string}")
+    public void deveSerRetornadaAMensagem(String msgEsperada) {
+        RestAssured.given().
+                body("{\"code\":1,\"type\":\"error\",\"message\":\"Pet not found\"}").
+                then().statusCode(404).
+                body("message", is(msgEsperada));
+    }
+
 }

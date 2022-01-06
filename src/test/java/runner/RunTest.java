@@ -12,7 +12,7 @@ import java.io.IOException;
         plugin = {"pretty", "html:target/report.html", "json:target/report/cucumber.json"},
         features = {"src/test/resources/features"},
         glue = {"steps"},
-        tags = "@regressivo"
+        tags = "@deleteStore"
 )
 
 public class RunTest {

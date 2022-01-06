@@ -18,7 +18,7 @@ public class ApiRequest extends ApiUtils implements ApiVerbos{
 
     @Override
     public void POST() {
-        response = given().
+        response = given().log().all().
                 relaxedHTTPSValidation().
                 headers(headers).
                 body(body.toString()).

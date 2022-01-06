@@ -79,8 +79,8 @@ font-src * data: blob: 'unsafe-inline';"/>
     "labels": [
       "steps.Hooks.before(io.cucumber.java.Scenario)",
       "existe um pet cadastrado na api",
-      "deleto esse pet",
-      "o pet deve ser deletado corretamente",
+      "altero os dados do pet",
+      "o pet deve ser alterado com sucesso",
       "o status code do request deve ser 200",
       "steps.Hooks.after()"
     ],
@@ -90,7 +90,7 @@ font-src * data: blob: 'unsafe-inline';"/>
           0,
           0,
           0,
-          1,
+          0,
           0,
           0,
           0
@@ -174,7 +174,7 @@ font-src * data: blob: 'unsafe-inline';"/>
         {
           "ticks": {
             "min": 0,
-            "stepSize": 1,
+            "stepSize": 0,
             "display": true
           },
           "stacked": true,
@@ -277,7 +277,7 @@ font-src * data: blob: 'unsafe-inline';"/>
                                 <a class="nav-link " href="pages/feature-summary.html">All Features</a>
                     </li>
             </ul>
-            <span class="text-light">2022-01-05 11:48:12</span>
+            <span class="text-light">2022-01-05 15:25:01</span>
         </div>
     </nav>
     <main role="main" class="container">
@@ -287,7 +287,7 @@ font-src * data: blob: 'unsafe-inline';"/>
                             <a href="pages/feature-scenarios/feature_0.html">Gerenciamento de um animal na Petstore</a>
                         <span class="small">file:src/test/resources/features/Pet.feature</span>
                     </h5>
-                    <h3>Deletar um pet existente na API Petstore</h3>
+                    <h3>Alterar um pet existente na API Petstore</h3>
             </div>
 
     <div class="row" id="scenario-detail">
@@ -305,15 +305,15 @@ font-src * data: blob: 'unsafe-inline';"/>
         <div class="card h-100">
                 <div class="card-header">Scenario Info</div>
             <div class="card-body">
-                <li class="list-group-item">Started on:<br>2022-01-05 11:48:06</li>
-                <li class="list-group-item">Ended on:<br>2022-01-05 11:48:09</li>
-            <li class="list-group-item">Test Runtime:<br>0m 02s 484ms</li>
+                <li class="list-group-item">Started on:<br>2022-01-05 15:24:55</li>
+                <li class="list-group-item">Ended on:<br>2022-01-05 15:24:56</li>
+            <li class="list-group-item">Test Runtime:<br>0m 01s 665ms</li>
             <li class="list-group-item">
                     <a href="pages/tag-scenarios/tag_regressivo.html">@regressivo</a>,
 
                     <a href="pages/tag-scenarios/tag_pets.html">@pets</a>,
 
-                    <a href="pages/tag-scenarios/tag_delete.html">@delete</a>            </li>
+                    <a href="pages/tag-scenarios/tag_put.html">@put</a>            </li>
             </div>
         </div>
     </div>
@@ -363,7 +363,7 @@ font-src * data: blob: 'unsafe-inline';"/>
                                 </span>
                             </div>
                             <div class="col-2 text-left small">
-                                0m 00s 000ms
+                                0m 00s 005ms
                             </div>
                             <div class="col-1 text-right">
     <i class="color-passed cluecumber-icon icon-passed" data-toggle="tooltip"
@@ -392,7 +392,7 @@ font-src * data: blob: 'unsafe-inline';"/>
                                 </span>
                             </div>
                             <div class="col-2 text-left small">
-                                0m 00s 997ms
+                                0m 00s 810ms
                             </div>
                             <div class="col-1 text-right">
     <i class="color-passed cluecumber-icon icon-passed" data-toggle="tooltip"
@@ -413,7 +413,7 @@ font-src * data: blob: 'unsafe-inline';"/>
         
     ],
     "status": "available"
-}<br><br>Tempo de resposta988</div>
+}<br><br>Tempo de resposta796</div>
         </div>
                         </div>
 
@@ -421,13 +421,13 @@ font-src * data: blob: 'unsafe-inline';"/>
                         <div class="row row_passed table-row-passed">
                             <div class="col-9 text-left">
                                 <span class="text-left">2.</span>
-                                <span data-toggle="tooltip" title="steps.PetSteps.deletoEssePet()">
-                                    <a href="pages/step-scenarios/step_0165165813.html"><span
-                                                class="keyword">Quando </span> deleto esse pet</a>
+                                <span data-toggle="tooltip" title="steps.PetSteps.alteroOsDadosDoPet()">
+                                    <a href="pages/step-scenarios/step_0265071035.html"><span
+                                                class="keyword">Quando </span> altero os dados do pet</a>
                                 </span>
                             </div>
                             <div class="col-2 text-left small">
-                                0m 01s 455ms
+                                0m 00s 839ms
                             </div>
                             <div class="col-1 text-right">
     <i class="color-passed cluecumber-icon icon-passed" data-toggle="tooltip"
@@ -435,13 +435,20 @@ font-src * data: blob: 'unsafe-inline';"/>
                             </div>
 
         <div class="row w-100 p-3 m-0 scenarioOutput">
-            <div class="w-100 text-left small p-2">DADOS ENVIADOS NO REQUEST<br><br>DELETEhttps://petstore.swagger.io/v2/pet/7634<br><br>Headers: 
+            <div class="w-100 text-left small p-2">DADOS ENVIADOS NO REQUEST<br><br>PUThttps://petstore.swagger.io/v2/pet<br><br>Body: 
+{"photoUrls":[],"name":"string","id":7634,"status":"pending"}<br><br>Headers: 
 {Accept=application/json, Content-Type=application/json}<br><br>DADOS RECEBIDOS<br><br>Status code: 200<br><br>Payload recebido: 
 {
-    "code": 200,
-    "type": "unknown",
-    "message": "7634"
-}<br><br>Tempo de resposta1435</div>
+    "id": 7634,
+    "name": "string",
+    "photoUrls": [
+        
+    ],
+    "tags": [
+        
+    ],
+    "status": "pending"
+}<br><br>Tempo de resposta811</div>
         </div>
                         </div>
 
@@ -449,13 +456,13 @@ font-src * data: blob: 'unsafe-inline';"/>
                         <div class="row row_passed table-row-passed">
                             <div class="col-9 text-left">
                                 <span class="text-left">3.</span>
-                                <span data-toggle="tooltip" title="steps.PetSteps.oPetDeveSerDeletadoCorretamente()">
-                                    <a href="pages/step-scenarios/step_0361098412.html"><span
-                                                class="keyword">Entao </span> o pet deve ser deletado corretamente</a>
+                                <span data-toggle="tooltip" title="steps.PetSteps.oPetDeveSerAlteradoComSucesso()">
+                                    <a href="pages/step-scenarios/step_0792917855.html"><span
+                                                class="keyword">Entao </span> o pet deve ser alterado com sucesso</a>
                                 </span>
                             </div>
                             <div class="col-2 text-left small">
-                                0m 00s 029ms
+                                0m 00s 010ms
                             </div>
                             <div class="col-1 text-right">
     <i class="color-passed cluecumber-icon icon-passed" data-toggle="tooltip"
@@ -474,7 +481,7 @@ font-src * data: blob: 'unsafe-inline';"/>
                                 </span>
                             </div>
                             <div class="col-2 text-left small">
-                                0m 00s 001ms
+                                0m 00s 000ms
                             </div>
                             <div class="col-1 text-right">
     <i class="color-passed cluecumber-icon icon-passed" data-toggle="tooltip"
@@ -493,7 +500,7 @@ font-src * data: blob: 'unsafe-inline';"/>
 
 <footer class="footer navbar-dark">
     <div class="container-fluid">
-        <span>Cluecumber Report Plugin version 2.7.0 - Report generated on 2022-01-05 11:48:12.</span>
+        <span>Cluecumber Report Plugin version 2.7.0 - Report generated on 2022-01-05 15:25:01.</span>
     </div>
 </footer>    </body>
     </html>
